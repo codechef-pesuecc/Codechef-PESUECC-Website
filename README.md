@@ -1,2 +1,1 @@
-# `Codechef`-PESUECC-Website
-<img src="CodeChef PESUECC LOGO.jpeg" />
+<img height=80 width=80 src="CodeChef PESUECC LOGO.jpeg" /><h1>`Codechef`-PESUECC-Website</h1>
