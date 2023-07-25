@@ -12,8 +12,7 @@ https://github.com/mozilla/geckodriver/releases
 Best to do it in a virtual environment
   - ```python3 -m venv venv```     => Create a virtual environment folder called venv in present directory
   - ```source venv/bin/activate``` => Activate environment for Mac or Linux
-  - ```cd venv/Scripts```          => On Windows
-    ```activate.bat```
+  - ```cd venv/Scripts``` & ```activate.bat```  => On Windows
 
   - ```pip3 install -r requirements.txt```
   - ```deactivate```               => To deactivate venv
