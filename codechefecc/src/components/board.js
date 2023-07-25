@@ -1,11 +1,32 @@
-import React, { useState } from 'react'
 import Profiles from './profiles';
 import { Leaderboard } from './database';
+
+import supabase from "../config/supabaseClient.js"
+import React, { useEffect, useState } from 'react'
 
 export default function Board() {
 
     const [period, setPeriod] = useState(0);
+    const [fetchError, setFetchError] = useState(null)
+    const [data, setData] = useState([])
 
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data, error } = await supabase
+                .from('leaderboard')
+                .select('*')
+            if (error) {
+                setFetchError('Could not fetch data')
+                console.log(error)
+                setData(null)
+            }
+            if (data) {
+                setFetchError(null)
+                setData(data)
+            }
+        }
+        fetchData()
+    }, [])
 
 
   return (
@@ -13,12 +34,11 @@ export default function Board() {
         <br/><br/>
         <h1 className='leaderboard'>Leaderboard</h1>
 
-        <Profiles Leaderboard={between(Leaderboard, period)}></Profiles>
+            <Profiles Leaderboard={between(data, period)}></Profiles>
 
     </div>
   )
 }
-
 
 
 function between(data, between){
