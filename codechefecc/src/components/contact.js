@@ -1,7 +1,12 @@
 import React from 'react'
+import MemberCloud from './MemberCloud'
+
+import './temp.css'
 
 export default function CONTACT(){
     return(
-        <h1 className="text-center">CONTACT CODECHEF-PESUECC</h1>
+        <div className='contact-page'>
+            <MemberCloud />
+        </div>
     )
 }
