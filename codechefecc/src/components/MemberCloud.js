@@ -3,11 +3,12 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Html } from '@react-three/drei';
 
 import image1 from './CodeChefLOGO.jpeg'
+import image2 from './space.jpg'
 
 const MemberCloud = () => {
 
   // Number of polka-dots you want on the sphere
-  const numPolkaDots = 100;
+  const numPolkaDots = 15;
 
   // Function to distribute points uniformly on the sphere's surface
   const fibonacciSphereSampling = (samples) => {
@@ -33,10 +34,10 @@ const MemberCloud = () => {
   const mainSphereRadius = 2;
 
   // Image size
-  const imageSize = "50px";
+  const imageSize = "100px";
 
   const imageUrls = [
-    image1
+    image1,image2,image2,image1,image2,image1,image2,image1,image2,image1,image2,image1,image2,image1
   ];
 
   return (
