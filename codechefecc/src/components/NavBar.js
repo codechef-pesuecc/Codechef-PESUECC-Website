@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import logo from './CodeChefLOGO.jpeg'
+import ThemeButton from "./ThemeButton";
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -11,7 +13,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <img src="../../../CodeChefLOGO.jpeg" alt="logo"></img>
+            <img src={""} alt="logo"></img>
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -67,10 +69,14 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Contact Us
+                Members
               </NavLink>
             </li>
+            <li>
+            <ThemeButton />
+            </li>
           </ul>
+          
         </div>
       </nav>
     </>

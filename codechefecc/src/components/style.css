@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: rgba(245, 233, 72, 0.871);
+        /* background-color: rgba(245, 233, 72, 0.871); */
 }
 
 
@@ -104,3 +104,21 @@
 .text-dark{
     color: var(--color-gold0);
 }
+
+.contact-page{
+    background-image: url("space.jpg");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Colors for light and dark theme */
+.light-theme {
+    background-color: #987554;
+    color: white;
+  }
+  
+  .dark-theme {
+    background-color: black;
+    color: #CCFF00;
+  }
