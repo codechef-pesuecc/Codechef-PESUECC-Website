@@ -8,6 +8,7 @@ const ThemeButton = () => {
     if (preferredTheme === 'dark') {
       setIsDarkMode(true);
     }
+    applyTheme(preferredTheme)
   }, []);
 
   const toggleTheme = () => {
