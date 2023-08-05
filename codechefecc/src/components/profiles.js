@@ -14,7 +14,7 @@ function Item(data){
         <>
             {
                 data.map((value, index) => (
-                    <div className="flex" key={index}>
+                    <div className="flex"  key={index} style={{ '--delay': `${index}s` }}>
                         <div className="item">
                             <img src={value.profile_image} alt="" />
             

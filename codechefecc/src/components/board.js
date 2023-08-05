@@ -4,6 +4,8 @@ import { Leaderboard } from './database';
 import supabase from "../config/supabaseClient.js"
 import React, { useEffect, useState } from 'react'
 
+
+
 export default function Board() {
 
     const [period, setPeriod] = useState(0);
@@ -25,7 +27,9 @@ export default function Board() {
                 setData(data)
             }
         }
+
         fetchData()
+        console.log(data)
     }, [])
 
 
