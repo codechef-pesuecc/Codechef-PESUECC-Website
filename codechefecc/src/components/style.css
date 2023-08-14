@@ -8,7 +8,7 @@
 :root{
     --color-dark: #2C3131;
     --color-light: #F3F3F2;
-    --color-gold0: #FFD700;
+    --color-gold0: #06107c;
     --color-gold1: #e3c206;
     --color-gold2: #cece06;
     --color-gold3: #887403;
@@ -60,57 +60,49 @@
     color: var(--color-light);
 }
 
+#profile{
+    overflow-y: scroll;
+    max-height: 300px;
+    border: 3px solid black;
+}
 
 #profile .flex{
     
     display: flex;
     justify-content: space-between;
-    height:3rem;
+    height:2rem;
     padding-top: 0.5em;
+    font-size: 0.2rem;
     padding-bottom: 0.5em;
-    padding-left: 1em;
+    padding-left: 2em;
     padding-right: 1em;
-    opacity:0%;
-    pointer-events: none;
+    box-shadow: 10px 10x 10px 10px #0505050a;
     text-align: left;
     justify-content: space-between;
-    border-radius: 100px 20px 20px 100px;
-    animation: animate 15s linear infinite;
-}
-@keyframes animate {
-    0%{
-      opacity:0.4;
-      transform:translateY(100%) scale(0.7);
-    }
-    5%, 20%{
-        opacity: 0.4;
-        transform: translateY(100%) scale(0.7);
-    }
-    25%, 40%{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0%) scale(0.7);
-    }
-    45%, 60%{
-        opacity:0.4;
-        transform: translateY(-100%) scale(0.7);
-    }
-    65%{
-        opacity:0.4;
-        transform:translateY(-100%) scale(0.5);
-    }
-    100%{
-        opacity:0;
-        transform: translateY(-100%) scale
-    }
+    border-radius: 50px 20px 20px 50px;
+    margin: 3px;
+    background-image: linear-gradient(to right, rgba(244, 191, 15, 0.802), rgb(246, 246, 246));
+    transition: background-image 10s ease-in-out;
+    transition: height 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
 }
 
-#profile .flex:nth-child(even){
-    background-color: rgb(7, 142, 142);
+#profile .flex:hover{
+
+    background-image: linear-gradient(to right, rgba(244, 191, 15, 0.802), rgb(249, 229, 6));
+    height: 2.5rem;
+    box-shadow: 10px 10px 50px 10px #0000000a;
+
+    
 }
 
-#profile .flex:nth-child(odd){
-    background-color: rgb(7, 224, 224);
+
+h3 .name .text-dark{
+    font-size:100px;
+}
+
+span{
+    font-size: 1px;
 }
 
 #profile .flex .item{
@@ -126,7 +118,27 @@
 #profile .flex .info{
    padding: 4em;
 
+
 }
+
+
+#profile .item img{
+
+    width: 2.66rem;
+    /* Size of the border */
+    /* border-width: 3px;
+    border-radius: 50%;
+    border: 5px solid red;
+    padding: 5px;
+     */
+    border-radius: 50%;
+    padding: 2px; /* Adjust to control border width */
+    background: linear-gradient(to right, rgb(84, 183, 48), rgb(217, 181, 24)); /* Gradient background */
+    
+}
+
+
+  
 
 .text-dark{
     color: var(--color-gold0);
