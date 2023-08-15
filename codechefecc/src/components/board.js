@@ -1,7 +1,5 @@
 import Profiles from './profiles';
-import { Leaderboard } from './database';
-
-import supabase from "../config/supabaseClient.js"
+import { supabase } from "../database/supabaseClient.js"
 import React, { useEffect, useState } from 'react'
 
 export default function Board() {
@@ -25,7 +23,9 @@ export default function Board() {
                 setData(data)
             }
         }
+
         fetchData()
+        console.log(data)
     }, [])
 
 

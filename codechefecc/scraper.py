@@ -24,7 +24,7 @@ options = webdriver.FirefoxOptions()
 supabase = create_client(supabase_url, supabase_key)
 
 # Create the service object
-service = Service('/Users/varun/Desktop/Projects/geckodriver')
+service = Service('/home/mayank/Desktop/Leaderboard/Codechef-PESUECC-Website/codechefecc/geckodriver')
 
 # Create the driver object
 driver = webdriver.Firefox(service=service, options=options)
