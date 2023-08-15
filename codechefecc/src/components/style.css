@@ -153,14 +153,20 @@ span{
 
 /* Colors for light and dark theme */
 .light-theme {
-    background-color: #987554;
-    color: white;
+    background: linear-gradient(to right, #fa8989 0%, #d590f8 20%, #d4b4f4 40%, #baa6f7 70%, #f39797 100%), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fsky%2F&psig=AOvVaw3ikYN-UT88NshthD2k1nwN&ust=1692178092169000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiV1uCs3oADFQAAAAAdAAAAABAE');
+   background-size: cover;
+    color: black;
   }
   
   .dark-theme {
-    background-color: black;
+    background: linear-gradient(to right, #000000 0%, #220033 20%, #330066 40%, #110044 70%, #000000 100%), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fgalaxy-background&psig=AOvVaw0lb5tEnukN5nvJdESCTybi&ust=1692177635355000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLD2yIer3oADFQAAAAAdAAAAABAE');
+   background-size: cover;
     color: #CCFF00;
   }
+
+.dark-theme .herologo img{
+    filter: sepia(10.9) brightness(3.5)
+}
 
 
   @keyframes moveRight {
@@ -188,27 +194,61 @@ span{
 
 .about{
     text-align: center;
-    border: 4px solid yellow;
-    box-shadow: 5px 5px 10px yellowgreen;
-    border-radius: 10%;
     padding: 10px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     font-size:x-large;
     animation: moveRight 4s ease-out forwards;
+}
+
+.about span{
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: initial;
 }
 
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    
 }
-
 
 .herologo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.herologo img{
     text-align: center;
-    height: 20;
-    width: 20;
+    height: 60vh;
+    width: 50vw;
     animation: moveleft 4s ease-out forwards;
 }
+
+/* ContactIcons.css */
+
+.contact-icons {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    transform: translateY(-80%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-icons a {
+    color: navy;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-icons a:hover {
+    color: white;
+    transform: translateY(-20px);
+  }
+  

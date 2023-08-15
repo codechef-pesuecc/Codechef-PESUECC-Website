@@ -1,6 +1,7 @@
 import Profiles from './profiles';
 import { supabase } from "../database/supabaseClient.js"
 import React, { useEffect, useState } from 'react'
+import Contactus from './contactus';
 
 export default function Board() {
 
@@ -30,6 +31,7 @@ export default function Board() {
 
 
   return (
+    <>
     <div className="board">
         <br/><br/>
         <h1 className='leaderboard'>Leaderboard</h1>
@@ -37,6 +39,8 @@ export default function Board() {
             <Profiles Leaderboard={between(data, period)}></Profiles>
 
     </div>
+    <Contactus/>
+    </>
   )
 }
 

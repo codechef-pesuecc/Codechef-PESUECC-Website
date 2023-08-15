@@ -1,86 +1,24 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./NavBar.css";
-import logo from './CodeChefLOGO.png'
-import ThemeButton from "./ThemeButton";
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './NavBar.css';
+import logo from "./CodeChefLOGO.png"
+import ThemeButton from './ThemeButton';
 
-function NavBar() {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
+const Navbar = () => {
   return (
-    <>
-      <nav className="navbar">
-        <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            <img src={""} alt="logo"></img>
-          </NavLink>
-
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            {/* <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                About
-              </NavLink>
-            </li> */}
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/board"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Leaderboard
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/events"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Events
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Members
-              </NavLink>
-            </li>
-            <li>
-            <ThemeButton />
-            </li>
-          </ul>
-          
-        </div>
-      </nav>
-    </>
+    <nav className="navbar">
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
+      <ul className="nav-links">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/board">Leaderboard</Link></li>
+        <li><Link to="/events">Events</Link></li>
+        <li><Link to="/members">Members</Link></li>
+        <l1><ThemeButton/></l1>
+      </ul>
+    </nav>
   );
 }
 
-export default NavBar;
+export default Navbar;
