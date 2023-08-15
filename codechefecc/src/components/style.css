@@ -62,7 +62,8 @@
 
 #profile{
     overflow-y: scroll;
-    max-height: 300px;
+    max-height: 60vh;
+    max-width: 70vw;
     border: 3px solid black;
 }
 
@@ -80,18 +81,21 @@
     text-align: left;
     justify-content: space-between;
     border-radius: 50px 20px 20px 50px;
-    margin: 3px;
+    border-top: 4px solid transparent;
+    margin: 0em;
     background-image: linear-gradient(to right, rgba(244, 191, 15, 0.802), rgb(246, 246, 246));
     transition: background-image 10s ease-in-out;
-    transition: height 0.1s ease-in-out;
+    transition: height 0.5s ease-in-out;
     transition: box-shadow 0.1s ease-in-out;
+    transition: margin 0.5s ease-in-out;
 }
 
 #profile .flex:hover{
 
     background-image: linear-gradient(to right, rgba(244, 191, 15, 0.802), rgb(249, 229, 6));
-    height: 2.5rem;
-    box-shadow: 10px 10px 50px 10px #0000000a;
+    height: 2.8rem;
+    margin: 2em;
+    box-shadow: 1px 1px 20px 10px rgba(198, 189, 11, 0.606);
 
     
 }
@@ -111,7 +115,7 @@ span{
 }
 
 #profile .flex img{
-    width: 10%;
+    width: 5%;
     border-radius: 50%;
 }
 
@@ -121,6 +125,9 @@ span{
 
 }
 
+span {
+    color: #2C3131;
+}
 
 #profile .item img{
 
