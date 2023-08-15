@@ -162,32 +162,61 @@ const MemberCloud = () => {
     });
 
     return (
-        <Cloud
-        key={v4()}
-        id={"icon"}
-        minContrastRatio={1}
-        backgroundHexColor={"#fff"}
-        fallbackHexColor={"#000"}
-        options={tagCanvasOptions}
-        containerProps={{
-            style: {
-              position: 'fixed', // Set to 'absolute' if needed
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              overflow: 'hidden', // Ensure the canvas doesn't overflow the viewport
-            },
-          }}
-          canvasProps={{
-            style: {
-              width: '100%',
-              height: '100%',
-            },
-          }}
-        >
-            {iconsDivs}
-        </Cloud>
+    //     <Cloud
+    //     key={v4()}
+    //     id={"icon"}
+    //     minContrastRatio={1}
+    //     backgroundHexColor={"#fff"}
+    //     fallbackHexColor={"#000"}
+    //     options={tagCanvasOptions}
+    //     containerProps={{
+    //         style: {
+    //           position: 'fixed', // Set to 'absolute' if needed
+    //           top: 0,
+    //           left: 0,
+    //           width: '100%',
+    //           height: '100%',
+    //           overflow: 'hidden', // Ensure the canvas doesn't overflow the viewport
+    //         },
+    //       }}
+    //       canvasProps={{
+    //         style: {
+    //           width: '100%',
+    //           height: '100%',
+    //         },
+    //       }}
+    //     >
+    //         {iconsDivs}
+    //     </Cloud>
+
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Cloud
+                id={"icon"}
+                minContrastRatio={1}
+                iconSize={50}
+                backgroundHexColor={"#fff"}
+                fallbackHexColor={"#000"}
+                options={tagCanvasOptions}
+                containerProps={{
+                    style: {
+                        position: 'fixed', // Set to 'absolute' if needed
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        overflow: 'hidden', // Ensure the canvas doesn't overflow the viewport
+                    },
+                }}
+                canvasProps={{
+                    style: {
+                        width: '100%',
+                        height: '100%',
+                    },
+                }}
+            >
+                {iconsDivs}
+            </Cloud>
+        </div>
     );
 };
 
