@@ -161,3 +161,54 @@ span{
     background-color: black;
     color: #CCFF00;
   }
+
+
+  @keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveleft {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.about{
+    text-align: center;
+    border: 4px solid yellow;
+    box-shadow: 5px 5px 10px yellowgreen;
+    border-radius: 10%;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    font-size:x-large;
+    animation: moveRight 4s ease-out forwards;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    
+}
+
+
+.herologo{
+    text-align: center;
+    height: 20;
+    width: 20;
+    animation: moveleft 4s ease-out forwards;
+}
