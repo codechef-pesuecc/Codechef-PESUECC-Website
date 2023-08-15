@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import logo from './CodeChefLOGO.jpeg'
 import ThemeButton from "./ThemeButton";
 
 function NavBar() {
