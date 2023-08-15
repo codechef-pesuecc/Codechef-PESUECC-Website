@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import logo from './CodeChefLOGO.jpeg'
+import logo from './CodeChefLOGO.png'
 import ThemeButton from "./ThemeButton";
 
 function NavBar() {
@@ -28,7 +28,7 @@ function NavBar() {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 exact
                 to="/about"
@@ -38,7 +38,7 @@ function NavBar() {
               >
                 About
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink
                 exact

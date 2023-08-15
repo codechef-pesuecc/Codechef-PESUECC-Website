@@ -2,7 +2,7 @@ import React from "react";
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Html } from '@react-three/drei';
 
-import image1 from './CodeChefLOGO.jpeg'
+import image1 from './CodeChefLOGO.png'
 import image2 from './space.jpg'
 
 const MemberCloud = () => {
