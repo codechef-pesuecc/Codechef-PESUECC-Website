@@ -1,9 +1,4 @@
 import React from "react";
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Html } from '@react-three/drei';
-
-import image1 from './CodeChefLOGO.png'
-import image2 from './space.jpg'
 import { supabaseServiceRole } from "../database/supabaseClient.js";
 import { v4 } from "uuid";
 import { Cloud } from "react-icon-cloud";
@@ -149,7 +144,9 @@ const MemberCloud = () => {
                 <img
                 src={`${bucketUrl}/object/public/${bucketName}/${folderPath}/${file.name}`}
                 alt={`Image ${index}`}
-                style={{ width: imageSize, height: imageSize, cursor: 'pointer' }}
+                width={imageSize}
+                height={imageSize}
+                style={{ cursor: 'pointer' }}
                 onClick={(e) => e.preventDefault()}
                 />
                 <div>
