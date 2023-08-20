@@ -3,10 +3,8 @@ import './components/style.css';
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/home'
-import About from './components/about'
 import Contact from './components/contact'
 import Events from './components/events'
-import MemberCloud from './components/MemberCloud';
 
 function App() {
   return (

@@ -152,7 +152,7 @@ span {
 }
 
 .contact-page{
-    background-image: url("space.jpg");
+    /* background-image: url("space.jpg"); */
     width: 100%;
     height: 100%;
     position: absolute;

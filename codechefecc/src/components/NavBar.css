@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  /* Appear above all other Components*/
+  z-index: 99;
+  position: relative;
 }
 
 

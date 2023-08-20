@@ -1,6 +1,5 @@
 import React from "react";
 import { supabaseServiceRole } from "../database/supabaseClient.js";
-import { v4 } from "uuid";
 import { Cloud } from "react-icon-cloud";
 import { useState, useEffect } from 'react';
 
@@ -28,7 +27,7 @@ const MemberCloud = () => {
     // dragControl: true,
     // dragThreshold: 100,
     // fadeIn: number
-    freezeActive: true,
+    // freezeActive: true,
     freezeDecel: true,
     // frontSelect: boolean
     // hideTags: false,
