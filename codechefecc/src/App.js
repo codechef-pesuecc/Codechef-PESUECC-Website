@@ -6,6 +6,7 @@ import Home from './components/home'
 import About from './components/about'
 import Contact from './components/contact'
 import Events from './components/events'
+import MemberCloud from './components/MemberCloud';
 
 function App() {
   return (
@@ -16,10 +17,9 @@ function App() {
         <div className="pages" id='main'>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/board" element={<Board />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/members" element={<Contact />} />
           </Routes>
         </div>
       </Router>

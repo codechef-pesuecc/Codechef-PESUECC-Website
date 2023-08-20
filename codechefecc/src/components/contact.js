@@ -4,7 +4,7 @@ import MemberCloud from './MemberCloud'
 export default function CONTACT(){
     return(
         <div className='contact-page'>
-            <MemberCloud />
+            <MemberCloud/>
         </div>
     )
 }
