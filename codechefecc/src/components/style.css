@@ -5,6 +5,11 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: fontone;
+    src: url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+}
+
 :root{
     --color-dark: #2C3131;
     --color-light: #F3F3F2;
@@ -13,6 +18,43 @@
     --color-gold2: #cece06;
     --color-gold3: #887403;
 }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d; 
+}
+
+.board ::-webkit-scrollbar {
+    width: 0.5rem;
+
+}
+ 
+.board ::-webkit-scrollbar-track {
+    background-color: #f5d688;
+    -webkit-border-radius: 1rem;
+    border-radius: 10px;
+}
+
+.board ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #f0a207; 
+}
+
+
+
 
 
 #main{
@@ -23,18 +65,17 @@
         /* background-color: rgba(245, 233, 72, 0.871); */
 }
 
-
+.board .leaderboard{
+    padding-bottom:1em;
+}
 
 .board {
     text-align: center;
     width: 50%;
-  
+      
 }
 
-.board .leaderboard{
-    margin-bottom: 1em;
-    
-}
+
 
 .board .duration{
     display: flex;
@@ -62,19 +103,21 @@
 
 #profile{
     overflow-y: scroll;
-    max-height: 60vh;
+    max-height: 70vh;
     max-width: 70vw;
-    border: 3px solid black;
+    border-radius: 0.3rem;
+    padding-left: 0px;
+    border-top: 1px solid gold;
+    background-color:rgba(250, 223, 100, 0.576);
 }
 
 #profile .flex{
     
     display: flex;
     justify-content: space-between;
-    height:2rem;
-    padding-top: 0.5em;
-    font-size: 0.2rem;
-    padding-bottom: 0.5em;
+
+    height:8em;
+    font-size: 10px;
     padding-left: 2em;
     padding-right: 1em;
     box-shadow: 10px 10x 10px 10px #0505050a;
@@ -84,29 +127,39 @@
     border-top: 4px solid transparent;
     margin: 0em;
     background-image: linear-gradient(to right, rgba(244, 191, 15, 0.802), rgb(246, 246, 246));
+    border-bottom: 0.5em solid #f6772d;
     transition: background-image 10s ease-in-out;
     transition: height 0.5s ease-in-out;
     transition: box-shadow 0.1s ease-in-out;
     transition: margin 0.5s ease-in-out;
+    transition: border-bottom 0.1s ease-in-out;
+    
+
 }
 
 #profile .flex:hover{
 
     background-image: linear-gradient(to right, rgba(244, 191, 15, 0.802), rgb(249, 229, 6));
-    height: 2.8rem;
-    margin: 2em;
-    box-shadow: 1px 1px 20px 10px rgba(198, 189, 11, 0.606);
-
+    height: 8em;
+    margin: 0.5em;
+    box-shadow: 0px 1px 20px 6px rgba(198, 189, 11, 0.9);
+    border-bottom: 1em solid #f82500;
     
+}
+
+.info{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 
 
 h3 .name .text-dark{
-    font-size:100px;
+    font-size:1rem;
 }
 
 span{
-    font-size: 1px;
+    font-size: 1rem;
 }
 
 #profile .flex .item{
@@ -140,7 +193,7 @@ span {
      */
     border-radius: 50%;
     padding: 2px; /* Adjust to control border width */
-    background: linear-gradient(to right, rgb(84, 183, 48), rgb(217, 181, 24)); /* Gradient background */
+    background: linear-gradient(to right, rgb(84, 183, 48), rgb(216, 255, 76)); /* Gradient background */
     
 }
 
@@ -162,12 +215,14 @@ span {
 .light-theme {
     background: linear-gradient(to right, #fa8989 0%, #d590f8 20%, #d4b4f4 40%, #baa6f7 70%, #f39797 100%), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fsky%2F&psig=AOvVaw3ikYN-UT88NshthD2k1nwN&ust=1692178092169000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiV1uCs3oADFQAAAAAdAAAAABAE');
    background-size: cover;
+   background-blend-mode: overlay; 
     color: black;
   }
   
   .dark-theme {
-    background: linear-gradient(to right, #000000 0%, #220033 20%, #330066 40%, #110044 70%, #000000 100%), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fgalaxy-background&psig=AOvVaw0lb5tEnukN5nvJdESCTybi&ust=1692177635355000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLD2yIer3oADFQAAAAAdAAAAABAE');
+    background: linear-gradient(to right, #000000 0%, #220033 20%, #330066 40%, #110044 60%, #140443 80%, #000000 100%), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fgalaxy-background&psig=AOvVaw0lb5tEnukN5nvJdESCTybi&ust=1692177635355000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLD2yIer3oADFQAAAAAdAAAAABAE');
    background-size: cover;
+   background-blend-mode: overlay; 
     color: #CCFF00;
   }
 
@@ -254,8 +309,40 @@ span {
     transition: color 0.3s;
   }
   
-  .contact-icons a:hover {
+.dark-theme  .contact-icons a:hover {
+    color: rgb(249, 231, 32);
+    transform: translateY(-20px);
+  }
+
+ .dark-theme .contact-icons {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    transform: translateY(-80%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+.dark-theme  .contact-icons a {
+    color: rgb(248, 208, 122);
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+.dark-theme  .contact-icons a:hover {
     color: white;
     transform: translateY(-20px);
   }
-  
+
+  .discrip{
+    color: white;
+    padding-left: 10px;
+    font-size: 100%;
+  }
+
+  .discripShort{
+    font-size: 100%;
+    font-family: fontone, serif;
+  }

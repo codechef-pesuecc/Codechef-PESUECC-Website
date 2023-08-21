@@ -33,7 +33,6 @@ export default function Board() {
   return (
     <>
     <div className="board">
-        <br/><br/>
         <h1 className='leaderboard'>Leaderboard</h1>
 
             <Profiles Leaderboard={between(data, period)}></Profiles>

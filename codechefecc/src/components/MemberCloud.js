@@ -134,7 +134,7 @@ const MemberCloud = () => {
     const numImages = imageList.length;
 
     // Calculate the size of each image based on the number of images
-    const imageSize = "50px";
+    const imageSize = "100px";
 
     console.log(imageList);
 
